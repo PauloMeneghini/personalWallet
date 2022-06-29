@@ -1,9 +1,8 @@
 :root{
-    --dark-blue: #363f5f;
-    --green: #1f7f15;
-    --medium-green: #6dbf5c;
-    --light-green: #bbffa3;
-    --red: #e92929;
+    --dark-blue: #042940;
+    --green: #1F7F15;
+    --medium-green: #6DBF5C;
+    --light-green: #BBFFA3;
 }
 
 *{
@@ -29,11 +28,21 @@ a{
     text-decoration: none;
 }
 
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 15px;
+}
 
 .container{
     width: min(90vw, 800px);
     margin: auto;
 }
+
+/* index.html */
+
 .container.login{
     display: flex;
     justify-content: center;
@@ -55,5 +64,70 @@ a{
 .btnLogin:hover, .btnRegister:hover{
     transition: 0.2s;
     background: var(--medium-green);
+    color: white;
+}
+
+/* home.html */
+
+.sr-only{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+#balance{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+/* infoUser */
+.infoUser{
+    z-index: 2;
+    margin-bottom: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+}
+.infoUser a{
+    display: inline-block;
+    text-align: right;
+    font-size: 20px;
+    font-weight: bold;
+}
+.infoUser img{
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+}
+
+/* Cards */
+.card{
+    background: white;
+    padding: 1.5rem 2rem;
+    border-radius: 0.25rem;
+    margin-bottom: 2rem;
+    color: var(--dark-blue);
+}
+.card h3{
+    font-weight: normal;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.card p{
+    font-size: 2rem;
+    line-height: 3rem;
+    margin-top: 1rem;
+}
+.card.total{
+    background: var(--green);
     color: white;
 }
